@@ -103,13 +103,30 @@ namespace KCureVDIDataBox
         /// 고정 드라이브 목록을 반환
         /// </summary>
         /// <returns></returns>
-        public static List<DriveInfo> GetDrives()
+        /*public static List<DriveInfo> GetDrives()
         {
             return DriveInfo.GetDrives()
                 .Where(drv => drv.DriveType == DriveType.Fixed)
                 .ToList();
-        }
+        }*/
 
+        /// <summary>
+        /// 고정 드라이브 목록을 반환
+        /// </summary>
+        /// <returns></returns>
+        public static List<DriveInfo> GetDrives()
+        {
+            List<DriveInfo> allDrives = DriveInfo.GetDrives().ToList();
+            List<DriveInfo> fixedDrives = allDrives.Where(drv => drv.DriveType == DriveType.Fixed).ToList();
+
+            // 드라이브가 2개 이상인 경우 D 드라이브만 반환
+            if (fixedDrives.Count >= 2)
+            {
+                return fixedDrives.Where(drv => drv.Name.StartsWith("D", StringComparison.OrdinalIgnoreCase)).ToList();
+            }
+
+            return fixedDrives;
+        }
         /// <summary>
         /// ConfigUser.xml의 전체 경로를 반환
         /// </summary>

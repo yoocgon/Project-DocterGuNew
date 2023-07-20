@@ -130,42 +130,43 @@
             // 
             statusStrip.ImageScalingSize = new Size(20, 20);
             statusStrip.Items.AddRange(new ToolStripItem[] { tsslLoginId });
-            statusStrip.Location = new Point(0, 831);
+            statusStrip.Location = new Point(0, 621);
             statusStrip.Name = "statusStrip";
-            statusStrip.Padding = new Padding(1, 0, 21, 0);
-            statusStrip.Size = new Size(1665, 26);
+            statusStrip.Padding = new Padding(1, 0, 16, 0);
+            statusStrip.Size = new Size(1295, 22);
             statusStrip.TabIndex = 2;
             statusStrip.Text = "StatusStrip";
             // 
             // tsslLoginId
             // 
             tsslLoginId.Name = "tsslLoginId";
-            tsslLoginId.Size = new Size(46, 20);
+            tsslLoginId.Size = new Size(36, 17);
             tsslLoginId.Text = "guest";
             // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 22F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 17F));
             tableLayoutPanel1.Controls.Add(splitOuter, 0, 0);
             tableLayoutPanel1.Controls.Add(tlpCommands, 0, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
+            tableLayoutPanel1.Margin = new Padding(2);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(1665, 831);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 38F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 15F));
+            tableLayoutPanel1.Size = new Size(1295, 621);
             tableLayoutPanel1.TabIndex = 4;
             // 
             // splitOuter
             // 
             splitOuter.BorderStyle = BorderStyle.Fixed3D;
             splitOuter.Dock = DockStyle.Fill;
-            splitOuter.Location = new Point(3, 4);
-            splitOuter.Margin = new Padding(3, 4, 3, 4);
+            splitOuter.Location = new Point(2, 3);
+            splitOuter.Margin = new Padding(2, 3, 2, 3);
             splitOuter.Name = "splitOuter";
             splitOuter.Orientation = Orientation.Horizontal;
             // 
@@ -176,20 +177,20 @@
             // splitOuter.Panel2
             // 
             splitOuter.Panel2.Controls.Add(splitBody);
-            splitOuter.Size = new Size(1659, 773);
-            splitOuter.SplitterDistance = 83;
-            splitOuter.SplitterWidth = 5;
+            splitOuter.Size = new Size(1291, 577);
+            splitOuter.SplitterDistance = 61;
             splitOuter.TabIndex = 1;
             // 
             // txtLog
             // 
             txtLog.Dock = DockStyle.Fill;
             txtLog.Location = new Point(0, 0);
+            txtLog.Margin = new Padding(2);
             txtLog.Multiline = true;
             txtLog.Name = "txtLog";
             txtLog.ReadOnly = true;
             txtLog.ScrollBars = ScrollBars.Vertical;
-            txtLog.Size = new Size(1655, 79);
+            txtLog.Size = new Size(1287, 57);
             txtLog.TabIndex = 0;
             // 
             // splitBody
@@ -197,7 +198,7 @@
             splitBody.BorderStyle = BorderStyle.Fixed3D;
             splitBody.Dock = DockStyle.Fill;
             splitBody.Location = new Point(0, 0);
-            splitBody.Margin = new Padding(3, 4, 3, 4);
+            splitBody.Margin = new Padding(2, 3, 2, 3);
             splitBody.Name = "splitBody";
             splitBody.Orientation = Orientation.Horizontal;
             // 
@@ -208,9 +209,8 @@
             // splitBody.Panel2
             // 
             splitBody.Panel2.Controls.Add(lvwStatus);
-            splitBody.Size = new Size(1659, 685);
-            splitBody.SplitterDistance = 561;
-            splitBody.SplitterWidth = 5;
+            splitBody.Size = new Size(1291, 512);
+            splitBody.SplitterDistance = 419;
             splitBody.TabIndex = 0;
             // 
             // splitBodyContent
@@ -218,7 +218,7 @@
             splitBodyContent.BorderStyle = BorderStyle.Fixed3D;
             splitBodyContent.Dock = DockStyle.Fill;
             splitBodyContent.Location = new Point(0, 0);
-            splitBodyContent.Margin = new Padding(3, 4, 3, 4);
+            splitBodyContent.Margin = new Padding(2, 3, 2, 3);
             splitBodyContent.Name = "splitBodyContent";
             // 
             // splitBodyContent.Panel1
@@ -228,9 +228,9 @@
             // splitBodyContent.Panel2
             // 
             splitBodyContent.Panel2.Controls.Add(splitRight);
-            splitBodyContent.Size = new Size(1659, 561);
-            splitBodyContent.SplitterDistance = 706;
-            splitBodyContent.SplitterWidth = 6;
+            splitBodyContent.Size = new Size(1291, 419);
+            splitBodyContent.SplitterDistance = 549;
+            splitBodyContent.SplitterWidth = 5;
             splitBodyContent.TabIndex = 0;
             // 
             // splitLeft
@@ -238,7 +238,7 @@
             splitLeft.BorderStyle = BorderStyle.Fixed3D;
             splitLeft.Dock = DockStyle.Fill;
             splitLeft.Location = new Point(0, 0);
-            splitLeft.Margin = new Padding(3, 4, 3, 4);
+            splitLeft.Margin = new Padding(2, 3, 2, 3);
             splitLeft.Name = "splitLeft";
             splitLeft.Orientation = Orientation.Horizontal;
             // 
@@ -249,35 +249,36 @@
             // splitLeft.Panel2
             // 
             splitLeft.Panel2.Controls.Add(lvwClient);
-            splitLeft.Size = new Size(706, 561);
-            splitLeft.SplitterDistance = 263;
-            splitLeft.SplitterWidth = 5;
+            splitLeft.Size = new Size(549, 419);
+            splitLeft.SplitterDistance = 195;
             splitLeft.TabIndex = 0;
             // 
             // tlpClient
             // 
             tlpClient.ColumnCount = 2;
-            tlpClient.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 79F));
+            tlpClient.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 61F));
             tlpClient.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tlpClient.Controls.Add(label1, 0, 0);
             tlpClient.Controls.Add(txtClient, 1, 0);
             tlpClient.Controls.Add(tvwClient, 0, 1);
             tlpClient.Dock = DockStyle.Fill;
             tlpClient.Location = new Point(0, 0);
+            tlpClient.Margin = new Padding(2);
             tlpClient.Name = "tlpClient";
             tlpClient.RowCount = 2;
-            tlpClient.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tlpClient.RowStyles.Add(new RowStyle(SizeType.Absolute, 22F));
             tlpClient.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tlpClient.Size = new Size(702, 259);
+            tlpClient.Size = new Size(545, 191);
             tlpClient.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Dock = DockStyle.Fill;
-            label1.Location = new Point(3, 0);
+            label1.Location = new Point(2, 0);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(73, 30);
+            label1.Size = new Size(57, 22);
             label1.TabIndex = 0;
             label1.Text = "Client:";
             label1.TextAlign = ContentAlignment.MiddleLeft;
@@ -285,10 +286,11 @@
             // txtClient
             // 
             txtClient.Dock = DockStyle.Fill;
-            txtClient.Location = new Point(82, 3);
+            txtClient.Location = new Point(63, 2);
+            txtClient.Margin = new Padding(2);
             txtClient.Name = "txtClient";
             txtClient.ReadOnly = true;
-            txtClient.Size = new Size(617, 27);
+            txtClient.Size = new Size(480, 23);
             txtClient.TabIndex = 1;
             // 
             // tvwClient
@@ -300,12 +302,12 @@
             tvwClient.HideSelection = false;
             tvwClient.ImageIndex = 0;
             tvwClient.ImageList = imageList1;
-            tvwClient.Location = new Point(3, 34);
-            tvwClient.Margin = new Padding(3, 4, 3, 4);
+            tvwClient.Location = new Point(2, 25);
+            tvwClient.Margin = new Padding(2, 3, 2, 3);
             tvwClient.Name = "tvwClient";
             tvwClient.SelectedImageIndex = 0;
             tvwClient.ShowLines = false;
-            tvwClient.Size = new Size(696, 221);
+            tvwClient.Size = new Size(541, 163);
             tvwClient.TabIndex = 0;
             // 
             // mnuPopup
@@ -313,20 +315,20 @@
             mnuPopup.ImageScalingSize = new Size(20, 20);
             mnuPopup.Items.AddRange(new ToolStripItem[] { tsmiDownload, tsmiOpen });
             mnuPopup.Name = "mnuPopup";
-            mnuPopup.Size = new Size(160, 52);
+            mnuPopup.Size = new Size(140, 48);
             mnuPopup.Opening += mnuPopup_Opening;
             // 
             // tsmiDownload
             // 
             tsmiDownload.Name = "tsmiDownload";
-            tsmiDownload.Size = new Size(159, 24);
+            tsmiDownload.Size = new Size(139, 22);
             tsmiDownload.Text = "다운로드(&D)";
             tsmiDownload.Click += tsmiDownload_Click;
             // 
             // tsmiOpen
             // 
             tsmiOpen.Name = "tsmiOpen";
-            tsmiOpen.Size = new Size(159, 24);
+            tsmiOpen.Size = new Size(139, 22);
             tsmiOpen.Text = "열기(&O)";
             tsmiOpen.Click += tsmiOpen_Click;
             // 
@@ -348,9 +350,9 @@
             lvwClient.FullRowSelect = true;
             lvwClient.LargeImageList = imageList1;
             lvwClient.Location = new Point(0, 0);
-            lvwClient.Margin = new Padding(3, 4, 3, 4);
+            lvwClient.Margin = new Padding(2, 3, 2, 3);
             lvwClient.Name = "lvwClient";
-            lvwClient.Size = new Size(702, 289);
+            lvwClient.Size = new Size(545, 216);
             lvwClient.SmallImageList = imageList1;
             lvwClient.TabIndex = 0;
             lvwClient.UseCompatibleStateImageBehavior = false;
@@ -381,7 +383,7 @@
             splitRight.BorderStyle = BorderStyle.Fixed3D;
             splitRight.Dock = DockStyle.Fill;
             splitRight.Location = new Point(0, 0);
-            splitRight.Margin = new Padding(3, 4, 3, 4);
+            splitRight.Margin = new Padding(2, 3, 2, 3);
             splitRight.Name = "splitRight";
             splitRight.Orientation = Orientation.Horizontal;
             // 
@@ -392,9 +394,8 @@
             // splitRight.Panel2
             // 
             splitRight.Panel2.Controls.Add(spltRightBottom);
-            splitRight.Size = new Size(947, 561);
-            splitRight.SplitterDistance = 263;
-            splitRight.SplitterWidth = 5;
+            splitRight.Size = new Size(737, 419);
+            splitRight.SplitterDistance = 195;
             splitRight.TabIndex = 1;
             // 
             // spltRightTop
@@ -403,6 +404,7 @@
             spltRightTop.Dock = DockStyle.Fill;
             spltRightTop.ForeColor = SystemColors.ControlText;
             spltRightTop.Location = new Point(0, 0);
+            spltRightTop.Margin = new Padding(2);
             spltRightTop.Name = "spltRightTop";
             // 
             // spltRightTop.Panel1
@@ -412,43 +414,47 @@
             // spltRightTop.Panel2
             // 
             spltRightTop.Panel2.Controls.Add(lvwServerPrti);
-            spltRightTop.Size = new Size(943, 259);
-            spltRightTop.SplitterDistance = 486;
+            spltRightTop.Size = new Size(733, 191);
+            spltRightTop.SplitterDistance = 377;
+            spltRightTop.SplitterWidth = 3;
             spltRightTop.TabIndex = 0;
             // 
             // tlpServerPrti
             // 
             tlpServerPrti.ColumnCount = 2;
-            tlpServerPrti.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 124F));
+            tlpServerPrti.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 96F));
             tlpServerPrti.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tlpServerPrti.Controls.Add(txtServerPrti, 1, 0);
             tlpServerPrti.Controls.Add(lblServerPrti, 0, 0);
             tlpServerPrti.Controls.Add(tvwServerPrti, 0, 1);
             tlpServerPrti.Dock = DockStyle.Fill;
             tlpServerPrti.Location = new Point(0, 0);
+            tlpServerPrti.Margin = new Padding(2);
             tlpServerPrti.Name = "tlpServerPrti";
             tlpServerPrti.RowCount = 2;
-            tlpServerPrti.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tlpServerPrti.RowStyles.Add(new RowStyle(SizeType.Absolute, 22F));
             tlpServerPrti.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tlpServerPrti.Size = new Size(486, 259);
+            tlpServerPrti.Size = new Size(377, 191);
             tlpServerPrti.TabIndex = 1;
             // 
             // txtServerPrti
             // 
             txtServerPrti.Dock = DockStyle.Fill;
-            txtServerPrti.Location = new Point(127, 3);
+            txtServerPrti.Location = new Point(98, 2);
+            txtServerPrti.Margin = new Padding(2);
             txtServerPrti.Name = "txtServerPrti";
             txtServerPrti.ReadOnly = true;
-            txtServerPrti.Size = new Size(356, 27);
+            txtServerPrti.Size = new Size(277, 23);
             txtServerPrti.TabIndex = 1;
             // 
             // lblServerPrti
             // 
             lblServerPrti.AutoSize = true;
             lblServerPrti.Dock = DockStyle.Fill;
-            lblServerPrti.Location = new Point(3, 0);
+            lblServerPrti.Location = new Point(2, 0);
+            lblServerPrti.Margin = new Padding(2, 0, 2, 0);
             lblServerPrti.Name = "lblServerPrti";
-            lblServerPrti.Size = new Size(118, 30);
+            lblServerPrti.Size = new Size(92, 22);
             lblServerPrti.TabIndex = 0;
             lblServerPrti.Text = "참여기관전송:";
             lblServerPrti.TextAlign = ContentAlignment.MiddleLeft;
@@ -462,13 +468,13 @@
             tvwServerPrti.HideSelection = false;
             tvwServerPrti.ImageIndex = 0;
             tvwServerPrti.ImageList = imageList1;
-            tvwServerPrti.Location = new Point(3, 34);
-            tvwServerPrti.Margin = new Padding(3, 4, 3, 4);
+            tvwServerPrti.Location = new Point(2, 25);
+            tvwServerPrti.Margin = new Padding(2, 3, 2, 3);
             tvwServerPrti.Name = "tvwServerPrti";
             tvwServerPrti.PathSeparator = "/";
             tvwServerPrti.SelectedImageIndex = 0;
             tvwServerPrti.ShowLines = false;
-            tvwServerPrti.Size = new Size(480, 221);
+            tvwServerPrti.Size = new Size(373, 163);
             tvwServerPrti.TabIndex = 1;
             // 
             // lvwServerPrti
@@ -478,9 +484,9 @@
             lvwServerPrti.Dock = DockStyle.Fill;
             lvwServerPrti.FullRowSelect = true;
             lvwServerPrti.Location = new Point(0, 0);
-            lvwServerPrti.Margin = new Padding(3, 4, 3, 4);
+            lvwServerPrti.Margin = new Padding(2, 3, 2, 3);
             lvwServerPrti.Name = "lvwServerPrti";
-            lvwServerPrti.Size = new Size(453, 259);
+            lvwServerPrti.Size = new Size(353, 191);
             lvwServerPrti.SmallImageList = imageList1;
             lvwServerPrti.TabIndex = 1;
             lvwServerPrti.UseCompatibleStateImageBehavior = false;
@@ -509,6 +515,7 @@
             // 
             spltRightBottom.Dock = DockStyle.Fill;
             spltRightBottom.Location = new Point(0, 0);
+            spltRightBottom.Margin = new Padding(2);
             spltRightBottom.Name = "spltRightBottom";
             // 
             // spltRightBottom.Panel1
@@ -518,43 +525,47 @@
             // spltRightBottom.Panel2
             // 
             spltRightBottom.Panel2.Controls.Add(lvwServerCarry);
-            spltRightBottom.Size = new Size(943, 289);
-            spltRightBottom.SplitterDistance = 486;
+            spltRightBottom.Size = new Size(733, 216);
+            spltRightBottom.SplitterDistance = 377;
+            spltRightBottom.SplitterWidth = 3;
             spltRightBottom.TabIndex = 1;
             // 
             // tlpServerCarry
             // 
             tlpServerCarry.ColumnCount = 2;
-            tlpServerCarry.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 124F));
+            tlpServerCarry.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 96F));
             tlpServerCarry.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tlpServerCarry.Controls.Add(txtServerCarry, 1, 0);
             tlpServerCarry.Controls.Add(lblServerCarry, 0, 0);
             tlpServerCarry.Controls.Add(tvwServerCarry, 0, 1);
             tlpServerCarry.Dock = DockStyle.Fill;
             tlpServerCarry.Location = new Point(0, 0);
+            tlpServerCarry.Margin = new Padding(2);
             tlpServerCarry.Name = "tlpServerCarry";
             tlpServerCarry.RowCount = 2;
-            tlpServerCarry.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+            tlpServerCarry.RowStyles.Add(new RowStyle(SizeType.Absolute, 22F));
             tlpServerCarry.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tlpServerCarry.Size = new Size(486, 289);
+            tlpServerCarry.Size = new Size(377, 216);
             tlpServerCarry.TabIndex = 1;
             // 
             // txtServerCarry
             // 
             txtServerCarry.Dock = DockStyle.Fill;
-            txtServerCarry.Location = new Point(127, 3);
+            txtServerCarry.Location = new Point(98, 2);
+            txtServerCarry.Margin = new Padding(2);
             txtServerCarry.Name = "txtServerCarry";
             txtServerCarry.ReadOnly = true;
-            txtServerCarry.Size = new Size(356, 27);
+            txtServerCarry.Size = new Size(277, 23);
             txtServerCarry.TabIndex = 1;
             // 
             // lblServerCarry
             // 
             lblServerCarry.AutoSize = true;
             lblServerCarry.Dock = DockStyle.Fill;
-            lblServerCarry.Location = new Point(3, 0);
+            lblServerCarry.Location = new Point(2, 0);
+            lblServerCarry.Margin = new Padding(2, 0, 2, 0);
             lblServerCarry.Name = "lblServerCarry";
-            lblServerCarry.Size = new Size(118, 30);
+            lblServerCarry.Size = new Size(92, 22);
             lblServerCarry.TabIndex = 0;
             lblServerCarry.Text = "반입:";
             lblServerCarry.TextAlign = ContentAlignment.MiddleLeft;
@@ -568,13 +579,13 @@
             tvwServerCarry.HideSelection = false;
             tvwServerCarry.ImageIndex = 0;
             tvwServerCarry.ImageList = imageList1;
-            tvwServerCarry.Location = new Point(3, 34);
-            tvwServerCarry.Margin = new Padding(3, 4, 3, 4);
+            tvwServerCarry.Location = new Point(2, 25);
+            tvwServerCarry.Margin = new Padding(2, 3, 2, 3);
             tvwServerCarry.Name = "tvwServerCarry";
             tvwServerCarry.PathSeparator = "/";
             tvwServerCarry.SelectedImageIndex = 0;
             tvwServerCarry.ShowLines = false;
-            tvwServerCarry.Size = new Size(480, 251);
+            tvwServerCarry.Size = new Size(373, 188);
             tvwServerCarry.TabIndex = 1;
             // 
             // lvwServerCarry
@@ -584,9 +595,9 @@
             lvwServerCarry.Dock = DockStyle.Fill;
             lvwServerCarry.FullRowSelect = true;
             lvwServerCarry.Location = new Point(0, 0);
-            lvwServerCarry.Margin = new Padding(3, 4, 3, 4);
+            lvwServerCarry.Margin = new Padding(2, 3, 2, 3);
             lvwServerCarry.Name = "lvwServerCarry";
-            lvwServerCarry.Size = new Size(453, 289);
+            lvwServerCarry.Size = new Size(353, 216);
             lvwServerCarry.SmallImageList = imageList1;
             lvwServerCarry.TabIndex = 1;
             lvwServerCarry.UseCompatibleStateImageBehavior = false;
@@ -617,9 +628,9 @@
             lvwStatus.Dock = DockStyle.Fill;
             lvwStatus.FullRowSelect = true;
             lvwStatus.Location = new Point(0, 0);
-            lvwStatus.Margin = new Padding(3, 4, 3, 4);
+            lvwStatus.Margin = new Padding(2, 3, 2, 3);
             lvwStatus.Name = "lvwStatus";
-            lvwStatus.Size = new Size(1655, 115);
+            lvwStatus.Size = new Size(1287, 85);
             lvwStatus.TabIndex = 0;
             lvwStatus.UseCompatibleStateImageBehavior = false;
             lvwStatus.View = View.Details;
@@ -650,18 +661,19 @@
             // 
             tlpCommands.ColumnCount = 3;
             tlpCommands.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tlpCommands.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 169F));
+            tlpCommands.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 131F));
             tlpCommands.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tlpCommands.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 22F));
+            tlpCommands.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 17F));
             tlpCommands.Controls.Add(pnlCommandsLeft, 0, 0);
             tlpCommands.Controls.Add(pnlCommandsRight, 2, 0);
             tlpCommands.Controls.Add(pnlCommandsCenter, 1, 0);
             tlpCommands.Dock = DockStyle.Fill;
-            tlpCommands.Location = new Point(3, 784);
+            tlpCommands.Location = new Point(2, 585);
+            tlpCommands.Margin = new Padding(2);
             tlpCommands.Name = "tlpCommands";
             tlpCommands.RowCount = 1;
             tlpCommands.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tlpCommands.Size = new Size(1659, 44);
+            tlpCommands.Size = new Size(1291, 34);
             tlpCommands.TabIndex = 2;
             // 
             // pnlCommandsLeft
@@ -670,9 +682,10 @@
             pnlCommandsLeft.Controls.Add(prgSub);
             pnlCommandsLeft.Controls.Add(prgMain);
             pnlCommandsLeft.Dock = DockStyle.Fill;
-            pnlCommandsLeft.Location = new Point(3, 3);
+            pnlCommandsLeft.Location = new Point(2, 2);
+            pnlCommandsLeft.Margin = new Padding(2);
             pnlCommandsLeft.Name = "pnlCommandsLeft";
-            pnlCommandsLeft.Size = new Size(739, 38);
+            pnlCommandsLeft.Size = new Size(576, 30);
             pnlCommandsLeft.TabIndex = 13;
             // 
             // btnStop
@@ -680,9 +693,10 @@
             btnStop.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnStop.Font = new Font("Wingdings 2", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             btnStop.ForeColor = SystemColors.Highlight;
-            btnStop.Location = new Point(692, 0);
+            btnStop.Location = new Point(539, 0);
+            btnStop.Margin = new Padding(2);
             btnStop.Name = "btnStop";
-            btnStop.Size = new Size(44, 30);
+            btnStop.Size = new Size(34, 22);
             btnStop.TabIndex = 13;
             btnStop.Text = "Ò";
             btnStop.UseVisualStyleBackColor = true;
@@ -692,18 +706,20 @@
             // prgSub
             // 
             prgSub.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            prgSub.Location = new Point(3, 2);
+            prgSub.Location = new Point(2, 2);
+            prgSub.Margin = new Padding(2);
             prgSub.Name = "prgSub";
-            prgSub.Size = new Size(682, 12);
+            prgSub.Size = new Size(531, 9);
             prgSub.TabIndex = 12;
             prgSub.Visible = false;
             // 
             // prgMain
             // 
             prgMain.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            prgMain.Location = new Point(3, 17);
+            prgMain.Location = new Point(2, 13);
+            prgMain.Margin = new Padding(2);
             prgMain.Name = "prgMain";
-            prgMain.Size = new Size(682, 12);
+            prgMain.Size = new Size(531, 9);
             prgMain.TabIndex = 12;
             prgMain.Visible = false;
             // 
@@ -711,19 +727,20 @@
             // 
             pnlCommandsRight.Controls.Add(btnExit);
             pnlCommandsRight.Dock = DockStyle.Fill;
-            pnlCommandsRight.Location = new Point(917, 3);
+            pnlCommandsRight.Location = new Point(713, 2);
+            pnlCommandsRight.Margin = new Padding(2);
             pnlCommandsRight.Name = "pnlCommandsRight";
-            pnlCommandsRight.Size = new Size(739, 38);
+            pnlCommandsRight.Size = new Size(576, 30);
             pnlCommandsRight.TabIndex = 17;
             // 
             // btnExit
             // 
             btnExit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnExit.DialogResult = DialogResult.Cancel;
-            btnExit.Location = new Point(627, 0);
-            btnExit.Margin = new Padding(4, 5, 4, 5);
+            btnExit.Location = new Point(489, 0);
+            btnExit.Margin = new Padding(3, 4, 3, 4);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(108, 30);
+            btnExit.Size = new Size(84, 22);
             btnExit.TabIndex = 17;
             btnExit.Text = "종료(&E)";
             btnExit.Click += btnExit_Click;
@@ -732,9 +749,10 @@
             // 
             pnlCommandsCenter.Controls.Add(btnRequestFile);
             pnlCommandsCenter.Dock = DockStyle.Fill;
-            pnlCommandsCenter.Location = new Point(748, 3);
+            pnlCommandsCenter.Location = new Point(582, 2);
+            pnlCommandsCenter.Margin = new Padding(2);
             pnlCommandsCenter.Name = "pnlCommandsCenter";
-            pnlCommandsCenter.Size = new Size(163, 38);
+            pnlCommandsCenter.Size = new Size(127, 30);
             pnlCommandsCenter.TabIndex = 18;
             // 
             // btnRequestFile
@@ -742,24 +760,24 @@
             btnRequestFile.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             btnRequestFile.DialogResult = DialogResult.Cancel;
             btnRequestFile.Location = new Point(0, 0);
-            btnRequestFile.Margin = new Padding(4, 5, 4, 5);
+            btnRequestFile.Margin = new Padding(3, 4, 3, 4);
             btnRequestFile.Name = "btnRequestFile";
-            btnRequestFile.Size = new Size(163, 30);
+            btnRequestFile.Size = new Size(127, 22);
             btnRequestFile.TabIndex = 16;
             btnRequestFile.Text = "반출 신청(&R)";
             btnRequestFile.Click += btnRequestFile_Click;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1665, 857);
+            ClientSize = new Size(1295, 643);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(statusStrip);
             Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
-            Margin = new Padding(6, 5, 6, 5);
+            Margin = new Padding(5, 4, 5, 4);
             Name = "MainForm";
             Text = "MainForm";
             FormClosing += MainForm_FormClosing;
@@ -811,8 +829,8 @@
             PerformLayout();
         }
         #endregion
-        private System.Windows.Forms.StatusStrip statusStrip;
-        private System.Windows.Forms.ToolStripStatusLabel tsslLoginId;
+        private StatusStrip statusStrip;
+        private ToolStripStatusLabel tsslLoginId;
         private TableLayoutPanel tableLayoutPanel1;
         private SplitContainer splitOuter;
         private SplitContainer splitBody;

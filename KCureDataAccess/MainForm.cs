@@ -39,9 +39,9 @@ namespace KCureVDIDataBox
 
                 // 각 파일, FTP용 클래스 생성
                 uiClient = new CUiClient(txtClient, tvwClient, lvwClient, CCommon.LoginId);
-                uiServerPrti = new CUiServer("03", this, txtServerPrti, tvwServerPrti, lvwServerPrti, lvwStatus, 
+                uiServerPrti = new CUiServer("03", this, txtServerPrti, tvwServerPrti, lvwServerPrti, lvwStatus,
                     prgSub, prgMain, btnStop, btnRequestFile, applyResult);
-                uiServerCarry = new CUiServer("04", this, txtServerCarry, tvwServerCarry, lvwServerCarry, lvwStatus, 
+                uiServerCarry = new CUiServer("04", this, txtServerCarry, tvwServerCarry, lvwServerCarry, lvwStatus,
                     prgSub, prgMain, btnStop, btnRequestFile, applyResult);
             }
             catch (Exception ex)

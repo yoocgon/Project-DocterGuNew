@@ -61,9 +61,7 @@ namespace KCureVDIDataBox
                 var response = await client.SendAsync(request);
                 response.EnsureSuccessStatusCode();
 
-                string jsonResponse = await response.Content.ReadAsStringAsync();
-
-                string jsonResponseTest = @"
+                string jsonResponse = @"
                 {
                   ""httpStatus"": 200,
                   ""successYn"": ""Y"",
@@ -167,7 +165,7 @@ namespace KCureVDIDataBox
                 }";
 
                 //
-                // jsonResponse = jsonResponseTest;
+                jsonResponse = await response.Content.ReadAsStringAsync();
                 Log("jsonResponse", PrettifyJSON(jsonResponse));
 
                 //Dictionary<string, object> dicJson = DeserializeJson(jsonResponse);
