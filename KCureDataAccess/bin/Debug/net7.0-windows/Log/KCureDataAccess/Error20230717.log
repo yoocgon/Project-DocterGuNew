@@ -1,0 +1,143 @@
+==================================================
+2023-07-17 14:25:51.432
+Message:
+Unexpected end when deserializing object. Path 'result', line 57, position 16.
+Source:
+Newtonsoft.Json
+StackTrace:
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJObject(JsonReader reader)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   at KCureVDIDataBox.CApi.PrettifyJSON(String json) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 4834
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 4682
+TargetSite:
+Newtonsoft.Json.Linq.JToken CreateJObject(Newtonsoft.Json.JsonReader)
+==================================================
+2023-07-17 14:29:38.003
+Message:
+Unexpected end when deserializing object. Path 'result', line 57, position 16.
+Source:
+Newtonsoft.Json
+StackTrace:
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJObject(JsonReader reader)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   at KCureVDIDataBox.CApi.PrettifyJSON(String json) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 4834
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 4682
+TargetSite:
+Newtonsoft.Json.Linq.JToken CreateJObject(Newtonsoft.Json.JsonReader)
+==================================================
+2023-07-17 14:31:35.173
+Message:
+Unexpected end when deserializing object. Path 'result', line 57, position 16.
+Source:
+Newtonsoft.Json
+StackTrace:
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateJObject(JsonReader reader)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value)
+   at KCureVDIDataBox.CApi.PrettifyJSON(String json) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 4834
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 4682
+TargetSite:
+Newtonsoft.Json.Linq.JToken CreateJObject(Newtonsoft.Json.JsonReader)
+==================================================
+2023-07-17 15:48:24.441
+Message:
+Unable to cast object of type 'System.Collections.Generic.Dictionary`2[System.String,System.Object]' to type 'System.Collections.Generic.Dictionary`2[System.String,System.String]'.
+Source:
+System.Private.CoreLib
+StackTrace:
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 4696
+TargetSite:
+System.Object ChkCast_Helper(Void*, System.Object)
+==================================================
+2023-07-17 15:49:17.173
+Message:
+Unable to cast object of type 'System.Collections.Generic.Dictionary`2[System.String,System.Object]' to type 'System.Collections.Generic.Dictionary`2[System.String,System.String]'.
+Source:
+System.Private.CoreLib
+StackTrace:
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 4696
+TargetSite:
+System.Object ChkCast_Helper(Void*, System.Object)
+==================================================
+2023-07-17 17:06:11.772
+Message:
+'d' is an invalid start of a property name. Expected a '"'. LineNumber: 19 | BytePositionInLine: 43.
+Source:
+System.Text.Json
+StackTrace:
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.JsonDocument.Parse(ReadOnlySpan`1 utf8JsonSpan, JsonReaderOptions readerOptions, MetadataDb& database, StackRowStack& stack)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 utf8Json, JsonReaderOptions readerOptions, Byte[] extraRentedArrayPoolBytes, PooledByteBufferWriter extraPooledByteBufferWriter)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 json, JsonDocumentOptions options)
+   at System.Text.Json.JsonDocument.Parse(String json, JsonDocumentOptions options)
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 4706
+TargetSite:
+Void ThrowJsonReaderException(System.Text.Json.Utf8JsonReader ByRef, System.Text.Json.ExceptionResource, Byte, System.ReadOnlySpan`1[System.Byte])
+==================================================
+2023-07-17 17:08:27.866
+Message:
+Expected depth to be zero at the end of the JSON payload. There is an open JSON object or array that should be closed. LineNumber: 61 | BytePositionInLine: 21.
+Source:
+System.Text.Json
+StackTrace:
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.JsonDocument.Parse(ReadOnlySpan`1 utf8JsonSpan, JsonReaderOptions readerOptions, MetadataDb& database, StackRowStack& stack)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 utf8Json, JsonReaderOptions readerOptions, Byte[] extraRentedArrayPoolBytes, PooledByteBufferWriter extraPooledByteBufferWriter)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 json, JsonDocumentOptions options)
+   at System.Text.Json.JsonDocument.Parse(String json, JsonDocumentOptions options)
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 4706
+TargetSite:
+Void ThrowJsonReaderException(System.Text.Json.Utf8JsonReader ByRef, System.Text.Json.ExceptionResource, Byte, System.ReadOnlySpan`1[System.Byte])
+==================================================
+2023-07-17 17:12:21.190
+Message:
+Unable to read data from the transport connection: 연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다..
+Source:
+System.Net.Sockets
+StackTrace:
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at FluentFTP.FtpSocketStream.ReadLine(Encoding encoding)
+   at FluentFTP.Client.BaseClient.BaseFtpClient.GetReplyInternal(String command, Boolean exhaustNoop, Int32 timeOut)
+   at FluentFTP.Client.BaseClient.BaseFtpClient.GetReplyInternal(String command)
+   at FluentFTP.Client.BaseClient.BaseFtpClient.FluentFTP.IInternalFtpClient.ExecuteInternal(String command)
+   at FluentFTP.FtpClient.Execute(String command)
+   at FluentFTP.FtpClient.Authenticate(String userName, String password, String account)
+   at FluentFTP.FtpClient.Authenticate()
+   at FluentFTP.FtpClient.Connect(Boolean reConnect)
+   at FluentFTP.FtpClient.Connect()
+   at KCureDataAccess.CFtpClient..ctor(String host, String user, String pass, Int32 port, Encoding encoding) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CFtpClient.cs:line 47
+   at KCureVDIDataBox.CUiServer.GetFtpClient() in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CUiServer.cs:line 145
+   at KCureVDIDataBox.CUiServer..ctor(Boolean forCarry, Form frm, TextBox txtServer, TreeView tvwServer, ListView lvwServer, ListView lvwStatus, ProgressBar prgSub, ProgressBar prgMain, Button btnStop, Button btnRequestFile) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CUiServer.cs:line 48
+   at KCureVDIDataBox.MainForm..ctor() in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\MainForm.cs:line 41
+TargetSite:
+Int32 Read(Byte[], Int32, Int32)
+
+Message:
+연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다.
+Source:
+System.Net.Sockets
+StackTrace:
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+TargetSite:
+Int32 Read(Byte[], Int32, Int32)

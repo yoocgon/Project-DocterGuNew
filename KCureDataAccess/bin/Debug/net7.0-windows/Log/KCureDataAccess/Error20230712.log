@@ -1,0 +1,31 @@
+==================================================
+2023-07-12 13:52:16.237
+Message:
+연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다.
+Source:
+Renci.SshNet
+StackTrace:
+   at Renci.SshNet.Abstractions.SocketAbstraction.ConnectCore(Socket socket, IPEndPoint remoteEndpoint, TimeSpan connectTimeout, Boolean ownsSocket)
+   at Renci.SshNet.Abstractions.SocketAbstraction.Connect(Socket socket, IPEndPoint remoteEndpoint, TimeSpan connectTimeout)
+   at Renci.SshNet.Connection.ConnectorBase.SocketConnect(String host, Int32 port, TimeSpan timeout)
+   at Renci.SshNet.Connection.DirectConnector.Connect(IConnectionInfo connectionInfo)
+   at Renci.SshNet.Session.Connect()
+   at Renci.SshNet.BaseClient.CreateAndConnectSession()
+   at Renci.SshNet.BaseClient.Connect()
+   at KCureDataAccess.CFtpClient..ctor(String host, String user, String pass, Int32 port, Encoding encoding) in C:\Users\User\Workspaces\visualStudio\Kcure-Data-Access\KCureDataAccess\CFtpClient.cs:line 62
+   at KCureVDIDataBox.CUiServer.GetFtpClient() in C:\Users\User\Workspaces\visualStudio\Kcure-Data-Access\KCureDataAccess\CUiServer.cs:line 145
+   at KCureVDIDataBox.CUiServer..ctor(Boolean forCarry, Form frm, TextBox txtServer, TreeView tvwServer, ListView lvwServer, ListView lvwStatus, ProgressBar prgSub, ProgressBar prgMain, Button btnStop, Button btnRequestFile) in C:\Users\User\Workspaces\visualStudio\Kcure-Data-Access\KCureDataAccess\CUiServer.cs:line 48
+   at KCureVDIDataBox.MainForm..ctor() in C:\Users\User\Workspaces\visualStudio\Kcure-Data-Access\KCureDataAccess\MainForm.cs:line 40
+TargetSite:
+Void ConnectCore(System.Net.Sockets.Socket, System.Net.IPEndPoint, System.TimeSpan, Boolean)
+==================================================
+2023-07-12 14:34:51.225
+Message:
+Response status code does not indicate success: 503 (Service Unavailable).
+Source:
+System.Net.Http
+StackTrace:
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Kcure-Data-Access\KCureDataAccess\CApi.cs:line 62
+TargetSite:
+System.Net.Http.HttpResponseMessage EnsureSuccessStatusCode()

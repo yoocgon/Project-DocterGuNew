@@ -1,0 +1,486 @@
+==================================================
+2023-07-18 09:05:27.869
+Message:
+연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다.
+Source:
+Renci.SshNet
+StackTrace:
+   at Renci.SshNet.Abstractions.SocketAbstraction.ConnectCore(Socket socket, IPEndPoint remoteEndpoint, TimeSpan connectTimeout, Boolean ownsSocket)
+   at Renci.SshNet.Abstractions.SocketAbstraction.Connect(Socket socket, IPEndPoint remoteEndpoint, TimeSpan connectTimeout)
+   at Renci.SshNet.Connection.ConnectorBase.SocketConnect(String host, Int32 port, TimeSpan timeout)
+   at Renci.SshNet.Connection.DirectConnector.Connect(IConnectionInfo connectionInfo)
+   at Renci.SshNet.Session.Connect()
+   at Renci.SshNet.BaseClient.CreateAndConnectSession()
+   at Renci.SshNet.BaseClient.Connect()
+   at KCureDataAccess.CFtpClient..ctor(String host, String user, String pass, Int32 port, Encoding encoding) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CFtpClient.cs:line 62
+   at KCureVDIDataBox.CUiServer.GetFtpClient() in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CUiServer.cs:line 170
+   at KCureVDIDataBox.CUiServer..ctor(String fileCode, Form frm, TextBox txtServer, TreeView tvwServer, ListView lvwServer, ListView lvwStatus, ProgressBar prgSub, ProgressBar prgMain, Button btnStop, Button btnRequestFile, ApplyResult applyResult) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CUiServer.cs:line 51
+   at KCureVDIDataBox.MainForm..ctor() in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\MainForm.cs:line 42
+TargetSite:
+Void ConnectCore(System.Net.Sockets.Socket, System.Net.IPEndPoint, System.TimeSpan, Boolean)
+==================================================
+2023-07-18 11:32:39.099
+Message:
+Socket read operation has timed out after 30000 milliseconds.
+Source:
+Renci.SshNet
+StackTrace:
+   at Renci.SshNet.Abstractions.SocketAbstraction.Read(Socket socket, Byte[] buffer, Int32 offset, Int32 size, TimeSpan readTimeout)
+   at Renci.SshNet.Connection.ProtocolVersionExchange.SocketReadLine(Socket socket, TimeSpan timeout, List`1 buffer)
+   at Renci.SshNet.Connection.ProtocolVersionExchange.Start(String clientVersion, Socket socket, TimeSpan timeout)
+   at Renci.SshNet.Session.Connect()
+   at Renci.SshNet.BaseClient.CreateAndConnectSession()
+   at Renci.SshNet.BaseClient.Connect()
+   at KCureDataAccess.CFtpClient..ctor(String host, String user, String pass, Int32 port, Encoding encoding) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CFtpClient.cs:line 62
+   at KCureVDIDataBox.CUiServer.GetFtpClient() in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CUiServer.cs:line 157
+   at KCureVDIDataBox.CUiServer..ctor(String fileCode, Form frm, TextBox txtServer, TreeView tvwServer, ListView lvwServer, ListView lvwStatus, ProgressBar prgSub, ProgressBar prgMain, Button btnStop, Button btnRequestFile, ApplyResult applyResult) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CUiServer.cs:line 51
+   at KCureVDIDataBox.MainForm..ctor() in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\MainForm.cs:line 42
+TargetSite:
+Int32 Read(System.Net.Sockets.Socket, Byte[], Int32, Int32, System.TimeSpan)
+==================================================
+2023-07-18 11:33:30.849
+Message:
+Socket read operation has timed out after 30000 milliseconds.
+Source:
+Renci.SshNet
+StackTrace:
+   at Renci.SshNet.Abstractions.SocketAbstraction.Read(Socket socket, Byte[] buffer, Int32 offset, Int32 size, TimeSpan readTimeout)
+   at Renci.SshNet.Connection.ProtocolVersionExchange.SocketReadLine(Socket socket, TimeSpan timeout, List`1 buffer)
+   at Renci.SshNet.Connection.ProtocolVersionExchange.Start(String clientVersion, Socket socket, TimeSpan timeout)
+   at Renci.SshNet.Session.Connect()
+   at Renci.SshNet.BaseClient.CreateAndConnectSession()
+   at Renci.SshNet.BaseClient.Connect()
+   at KCureDataAccess.CFtpClient..ctor(String host, String user, String pass, Int32 port, Encoding encoding) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CFtpClient.cs:line 62
+   at KCureVDIDataBox.CUiServer.GetFtpClient() in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CUiServer.cs:line 157
+   at KCureVDIDataBox.CUiServer..ctor(String fileCode, Form frm, TextBox txtServer, TreeView tvwServer, ListView lvwServer, ListView lvwStatus, ProgressBar prgSub, ProgressBar prgMain, Button btnStop, Button btnRequestFile, ApplyResult applyResult) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CUiServer.cs:line 51
+   at KCureVDIDataBox.MainForm..ctor() in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\MainForm.cs:line 42
+TargetSite:
+Int32 Read(System.Net.Sockets.Socket, Byte[], Int32, Int32, System.TimeSpan)
+==================================================
+2023-07-18 12:39:32.401
+Message:
+연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다.
+Source:
+Renci.SshNet
+StackTrace:
+   at Renci.SshNet.Abstractions.SocketAbstraction.ConnectCore(Socket socket, IPEndPoint remoteEndpoint, TimeSpan connectTimeout, Boolean ownsSocket)
+   at Renci.SshNet.Abstractions.SocketAbstraction.Connect(Socket socket, IPEndPoint remoteEndpoint, TimeSpan connectTimeout)
+   at Renci.SshNet.Connection.ConnectorBase.SocketConnect(String host, Int32 port, TimeSpan timeout)
+   at Renci.SshNet.Connection.DirectConnector.Connect(IConnectionInfo connectionInfo)
+   at Renci.SshNet.Session.Connect()
+   at Renci.SshNet.BaseClient.CreateAndConnectSession()
+   at Renci.SshNet.BaseClient.Connect()
+   at KCureDataAccess.CFtpClient..ctor(String host, String user, String pass, Int32 port, Encoding encoding) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CFtpClient.cs:line 62
+   at KCureVDIDataBox.CUiServer.GetFtpClient() in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CUiServer.cs:line 157
+   at KCureVDIDataBox.CUiServer..ctor(String fileCode, Form frm, TextBox txtServer, TreeView tvwServer, ListView lvwServer, ListView lvwStatus, ProgressBar prgSub, ProgressBar prgMain, Button btnStop, Button btnRequestFile, ApplyResult applyResult) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CUiServer.cs:line 51
+   at KCureVDIDataBox.MainForm..ctor() in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\MainForm.cs:line 42
+TargetSite:
+Void ConnectCore(System.Net.Sockets.Socket, System.Net.IPEndPoint, System.TimeSpan, Boolean)
+==================================================
+2023-07-18 12:40:45.116
+Message:
+연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다.
+Source:
+Renci.SshNet
+StackTrace:
+   at Renci.SshNet.Abstractions.SocketAbstraction.ConnectCore(Socket socket, IPEndPoint remoteEndpoint, TimeSpan connectTimeout, Boolean ownsSocket)
+   at Renci.SshNet.Abstractions.SocketAbstraction.Connect(Socket socket, IPEndPoint remoteEndpoint, TimeSpan connectTimeout)
+   at Renci.SshNet.Connection.ConnectorBase.SocketConnect(String host, Int32 port, TimeSpan timeout)
+   at Renci.SshNet.Connection.DirectConnector.Connect(IConnectionInfo connectionInfo)
+   at Renci.SshNet.Session.Connect()
+   at Renci.SshNet.BaseClient.CreateAndConnectSession()
+   at Renci.SshNet.BaseClient.Connect()
+   at KCureDataAccess.CFtpClient..ctor(String host, String user, String pass, Int32 port, Encoding encoding) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CFtpClient.cs:line 62
+   at KCureVDIDataBox.CUiServer.GetFtpClient() in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CUiServer.cs:line 157
+   at KCureVDIDataBox.CUiServer..ctor(String fileCode, Form frm, TextBox txtServer, TreeView tvwServer, ListView lvwServer, ListView lvwStatus, ProgressBar prgSub, ProgressBar prgMain, Button btnStop, Button btnRequestFile, ApplyResult applyResult) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CUiServer.cs:line 51
+   at KCureVDIDataBox.MainForm..ctor() in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\MainForm.cs:line 42
+TargetSite:
+Void ConnectCore(System.Net.Sockets.Socket, System.Net.IPEndPoint, System.TimeSpan, Boolean)
+==================================================
+2023-07-18 12:44:45.589
+Message:
+연결된 구성원으로부터 응답이 없어 연결하지 못했거나, 호스트로부터 응답이 없어 연결이 끊어졌습니다.
+Source:
+Renci.SshNet
+StackTrace:
+   at Renci.SshNet.Abstractions.SocketAbstraction.ConnectCore(Socket socket, IPEndPoint remoteEndpoint, TimeSpan connectTimeout, Boolean ownsSocket)
+   at Renci.SshNet.Abstractions.SocketAbstraction.Connect(Socket socket, IPEndPoint remoteEndpoint, TimeSpan connectTimeout)
+   at Renci.SshNet.Connection.ConnectorBase.SocketConnect(String host, Int32 port, TimeSpan timeout)
+   at Renci.SshNet.Connection.DirectConnector.Connect(IConnectionInfo connectionInfo)
+   at Renci.SshNet.Session.Connect()
+   at Renci.SshNet.BaseClient.CreateAndConnectSession()
+   at Renci.SshNet.BaseClient.Connect()
+   at KCureDataAccess.CFtpClient..ctor(String host, String user, String pass, Int32 port, Encoding encoding) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CFtpClient.cs:line 62
+   at KCureVDIDataBox.CUiServer.GetFtpClient() in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CUiServer.cs:line 157
+   at KCureVDIDataBox.CUiServer..ctor(String fileCode, Form frm, TextBox txtServer, TreeView tvwServer, ListView lvwServer, ListView lvwStatus, ProgressBar prgSub, ProgressBar prgMain, Button btnStop, Button btnRequestFile, ApplyResult applyResult) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CUiServer.cs:line 51
+   at KCureVDIDataBox.MainForm..ctor() in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\MainForm.cs:line 42
+TargetSite:
+Void ConnectCore(System.Net.Sockets.Socket, System.Net.IPEndPoint, System.TimeSpan, Boolean)
+==================================================
+2023-07-18 12:45:30.066
+Message:
+Response status code does not indicate success: 503 (Service Unavailable).
+Source:
+System.Net.Http
+StackTrace:
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 62
+TargetSite:
+System.Net.Http.HttpResponseMessage EnsureSuccessStatusCode()
+==================================================
+2023-07-18 12:46:01.463
+Message:
+Response status code does not indicate success: 503 (Service Unavailable).
+Source:
+System.Net.Http
+StackTrace:
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 62
+TargetSite:
+System.Net.Http.HttpResponseMessage EnsureSuccessStatusCode()
+==================================================
+2023-07-18 12:48:37.872
+Message:
+The JSON value could not be converted to System.String. Path: $.result.applyResult.authCode[0].AU006[0].AttfSeq | LineNumber: 0 | BytePositionInLine: 550.
+Source:
+System.Text.Json
+StackTrace:
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at KCureVDIDataBox.Model.BaseResponse.ToObject[T](JsonElement element) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\Model\BaseResponse.cs:line 23
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 4726
+TargetSite:
+Void ReThrowWithPath(System.Text.Json.ReadStack ByRef, System.Text.Json.Utf8JsonReader ByRef, System.Exception)
+
+Message:
+Cannot get the value of a token type 'Number' as a string.
+Source:
+System.Text.Json.Rethrowable
+StackTrace:
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonDictionaryConverter`3.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TDictionary& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+TargetSite:
+Void ThrowInvalidOperationException_ExpectedString(System.Text.Json.JsonTokenType)
+==================================================
+2023-07-18 12:49:09.818
+Message:
+The JSON value could not be converted to System.String. Path: $.result.applyResult.authCode[0].AU006[0].AttfSeq | LineNumber: 0 | BytePositionInLine: 550.
+Source:
+System.Text.Json
+StackTrace:
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at KCureVDIDataBox.Model.BaseResponse.ToObject[T](JsonElement element) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\Model\BaseResponse.cs:line 23
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 4726
+TargetSite:
+Void ReThrowWithPath(System.Text.Json.ReadStack ByRef, System.Text.Json.Utf8JsonReader ByRef, System.Exception)
+
+Message:
+Cannot get the value of a token type 'Number' as a string.
+Source:
+System.Text.Json.Rethrowable
+StackTrace:
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonDictionaryConverter`3.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TDictionary& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+TargetSite:
+Void ThrowInvalidOperationException_ExpectedString(System.Text.Json.JsonTokenType)
+==================================================
+2023-07-18 12:50:03.586
+Message:
+The JSON value could not be converted to System.String. Path: $.result.applyResult.authCode[0].AU006[0].AttfSeq | LineNumber: 0 | BytePositionInLine: 555.
+Source:
+System.Text.Json
+StackTrace:
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at KCureVDIDataBox.Model.BaseResponse.ToObject[T](JsonElement element) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\Model\BaseResponse.cs:line 23
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 4726
+TargetSite:
+Void ReThrowWithPath(System.Text.Json.ReadStack ByRef, System.Text.Json.Utf8JsonReader ByRef, System.Exception)
+
+Message:
+Cannot get the value of a token type 'Number' as a string.
+Source:
+System.Text.Json.Rethrowable
+StackTrace:
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonDictionaryConverter`3.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TDictionary& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+TargetSite:
+Void ThrowInvalidOperationException_ExpectedString(System.Text.Json.JsonTokenType)
+==================================================
+2023-07-18 13:13:38.646
+Message:
+'/' is an invalid start of a property name. Expected a '"'. LineNumber: 58 | BytePositionInLine: 32.
+Source:
+System.Text.Json
+StackTrace:
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextToken(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextTokenOrRollback(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.JsonDocument.Parse(ReadOnlySpan`1 utf8JsonSpan, JsonReaderOptions readerOptions, MetadataDb& database, StackRowStack& stack)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 utf8Json, JsonReaderOptions readerOptions, Byte[] extraRentedArrayPoolBytes, PooledByteBufferWriter extraPooledByteBufferWriter)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 json, JsonDocumentOptions options)
+   at System.Text.Json.JsonDocument.Parse(String json, JsonDocumentOptions options)
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 168
+TargetSite:
+Void ThrowJsonReaderException(System.Text.Json.Utf8JsonReader ByRef, System.Text.Json.ExceptionResource, Byte, System.ReadOnlySpan`1[System.Byte])
+==================================================
+2023-07-18 13:14:17.672
+Message:
+'/' is invalid after a value. Expected either ',', '}', or ']'. LineNumber: 58 | BytePositionInLine: 32.
+Source:
+System.Text.Json
+StackTrace:
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextToken(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextTokenOrRollback(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.JsonDocument.Parse(ReadOnlySpan`1 utf8JsonSpan, JsonReaderOptions readerOptions, MetadataDb& database, StackRowStack& stack)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 utf8Json, JsonReaderOptions readerOptions, Byte[] extraRentedArrayPoolBytes, PooledByteBufferWriter extraPooledByteBufferWriter)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 json, JsonDocumentOptions options)
+   at System.Text.Json.JsonDocument.Parse(String json, JsonDocumentOptions options)
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 168
+TargetSite:
+Void ThrowJsonReaderException(System.Text.Json.Utf8JsonReader ByRef, System.Text.Json.ExceptionResource, Byte, System.ReadOnlySpan`1[System.Byte])
+==================================================
+2023-07-18 13:25:41.808
+Message:
+'/' is invalid after a value. Expected either ',', '}', or ']'. LineNumber: 59 | BytePositionInLine: 39.
+Source:
+System.Text.Json
+StackTrace:
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextToken(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextTokenOrRollback(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.JsonDocument.Parse(ReadOnlySpan`1 utf8JsonSpan, JsonReaderOptions readerOptions, MetadataDb& database, StackRowStack& stack)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 utf8Json, JsonReaderOptions readerOptions, Byte[] extraRentedArrayPoolBytes, PooledByteBufferWriter extraPooledByteBufferWriter)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 json, JsonDocumentOptions options)
+   at System.Text.Json.JsonDocument.Parse(String json, JsonDocumentOptions options)
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 174
+TargetSite:
+Void ThrowJsonReaderException(System.Text.Json.Utf8JsonReader ByRef, System.Text.Json.ExceptionResource, Byte, System.ReadOnlySpan`1[System.Byte])
+==================================================
+2023-07-18 13:26:24.327
+Message:
+'/' is invalid after a value. Expected either ',', '}', or ']'. LineNumber: 59 | BytePositionInLine: 39.
+Source:
+System.Text.Json
+StackTrace:
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextToken(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ConsumeNextTokenOrRollback(Byte marker)
+   at System.Text.Json.Utf8JsonReader.ReadSingleSegment()
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.JsonDocument.Parse(ReadOnlySpan`1 utf8JsonSpan, JsonReaderOptions readerOptions, MetadataDb& database, StackRowStack& stack)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 utf8Json, JsonReaderOptions readerOptions, Byte[] extraRentedArrayPoolBytes, PooledByteBufferWriter extraPooledByteBufferWriter)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 json, JsonDocumentOptions options)
+   at System.Text.Json.JsonDocument.Parse(String json, JsonDocumentOptions options)
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 174
+TargetSite:
+Void ThrowJsonReaderException(System.Text.Json.Utf8JsonReader ByRef, System.Text.Json.ExceptionResource, Byte, System.ReadOnlySpan`1[System.Byte])
+==================================================
+2023-07-18 13:34:44.519
+Message:
+The JSON value could not be converted to System.String. Path: $.result.applyResult.authCode[0].AU006[0].AttfSeq | LineNumber: 0 | BytePositionInLine: 555.
+Source:
+System.Text.Json
+StackTrace:
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at KCureVDIDataBox.Model.BaseResponse.ToObject[T](JsonElement element) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\Model\BaseResponse.cs:line 23
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 193
+TargetSite:
+Void ReThrowWithPath(System.Text.Json.ReadStack ByRef, System.Text.Json.Utf8JsonReader ByRef, System.Exception)
+
+Message:
+Cannot get the value of a token type 'Number' as a string.
+Source:
+System.Text.Json.Rethrowable
+StackTrace:
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonDictionaryConverter`3.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TDictionary& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+TargetSite:
+Void ThrowInvalidOperationException_ExpectedString(System.Text.Json.JsonTokenType)
+==================================================
+2023-07-18 13:59:16.856
+Message:
+The JSON value could not be converted to System.String. Path: $.result.applyResult.authCode[0].AU006[0].AttfSeq | LineNumber: 0 | BytePositionInLine: 555.
+Source:
+System.Text.Json
+StackTrace:
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at KCureVDIDataBox.Model.BaseResponse.ToObject[T](JsonElement element) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\Model\BaseResponse.cs:line 23
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 193
+TargetSite:
+Void ReThrowWithPath(System.Text.Json.ReadStack ByRef, System.Text.Json.Utf8JsonReader ByRef, System.Exception)
+
+Message:
+Cannot get the value of a token type 'Number' as a string.
+Source:
+System.Text.Json.Rethrowable
+StackTrace:
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonDictionaryConverter`3.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TDictionary& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+TargetSite:
+Void ThrowInvalidOperationException_ExpectedString(System.Text.Json.JsonTokenType)
+==================================================
+2023-07-18 14:00:51.389
+Message:
+The JSON value could not be converted to System.String. Path: $.result.applyResult.authCode[0].AU006[0].AttfSeq | LineNumber: 0 | BytePositionInLine: 555.
+Source:
+System.Text.Json
+StackTrace:
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, Utf8JsonReader& reader, Exception ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at KCureVDIDataBox.Model.BaseResponse.ToObject[T](JsonElement element) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\Model\BaseResponse.cs:line 23
+   at KCureVDIDataBox.CApi.Send[T](String url, String jsonContent) in C:\Users\User\Workspaces\visualStudio\Project-DocterGu_New\KCureDataAccess\CApi.cs:line 193
+TargetSite:
+Void ReThrowWithPath(System.Text.Json.ReadStack ByRef, System.Text.Json.Utf8JsonReader ByRef, System.Exception)
+
+Message:
+Cannot get the value of a token type 'Number' as a string.
+Source:
+System.Text.Json.Rethrowable
+StackTrace:
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_ExpectedString(JsonTokenType tokenType)
+   at System.Text.Json.Utf8JsonReader.GetString()
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonDictionaryConverter`3.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TDictionary& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.ReadJsonAndSetMember(Object obj, ReadStack& state, Utf8JsonReader& reader)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+TargetSite:
+Void ThrowInvalidOperationException_ExpectedString(System.Text.Json.JsonTokenType)
