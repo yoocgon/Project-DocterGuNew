@@ -3,8 +3,10 @@ using FluentFTP;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace KCureVDIDataBox
 {
@@ -16,6 +18,9 @@ namespace KCureVDIDataBox
         private TextBox txtClient;
         private TreeView tvwClient;
         private ListView lvwClient;
+        private TreeNode nodeLastSelected;
+
+        private string userId;
 
         /// <summary>
         /// 관련된 모든 컨트롤을 초기화 시에 메모리에 저장하고 재사용하기 위해 지역 변수에 저장, 이벤트 지정
@@ -23,7 +28,7 @@ namespace KCureVDIDataBox
         /// <param name="txtClient"></param>
         /// <param name="tvwClient"></param>
         /// <param name="lvwClient"></param>
-        public CUiClient(TextBox txtClient, TreeView tvwClient, ListView lvwClient) {
+        public CUiClient(TextBox txtClient, TreeView tvwClient, ListView lvwClient, string userId) {
             this.txtClient = txtClient;
             this.tvwClient = tvwClient;
             this.lvwClient = lvwClient;
@@ -32,6 +37,8 @@ namespace KCureVDIDataBox
             this.tvwClient.BeforeSelect += tvwClient_BeforeSelect;
             this.tvwClient.NodeMouseClick += tvwClient_NodeMouseClick;
             this.lvwClient.DoubleClick += lvwClient_DoubleClick;
+
+            this.userId = userId;
         }
 
         /// <summary>
@@ -41,12 +48,15 @@ namespace KCureVDIDataBox
         /// <param name="e"></param>
         private void tvwClient_BeforeExpand(object? sender, TreeViewCancelEventArgs e)
         {
-            if (e.Node == null) return;
+            if (e.Node == null) 
+                return;
 
             var tag = e.Node.Tag;
-            if (tag == null) return;
+            if (tag == null) 
+                return;
             
-            if (!e.Node.Nodes.ContainsKey(CUiCommon._KEY_TEMP)) return;
+            if (!e.Node.Nodes.ContainsKey(CUiCommon._KEY_TEMP)) 
+                return;
 
             e.Node.Nodes.Clear();
             if (tag is DriveInfo)
@@ -60,6 +70,45 @@ namespace KCureVDIDataBox
                 AddDirectories(e.Node, di.FullName);
             }
         }
+
+        ///// <summary>
+        ///// TreeView의 폴더 노드를 선택하면 해당 폴더 안의 하위 폴더와 파일 목록을 ListView에 추가
+        ///// </summary>
+        ///// <param name="sender"></param>
+        ///// <param name="e"></param>
+        //private void tvwClient_BeforeSelect(object? sender, TreeViewCancelEventArgs e)
+        //{
+        //    if (e.Node == null) 
+        //        return;
+
+        //    txtClient.Text = e.Node.FullPath;
+
+        //    var tag = e.Node.Tag;
+        //    if (tag == null) 
+        //        return;
+
+        //    string parentFullName = "";
+        //    if (tag is DriveInfo)
+        //    {
+        //        DriveInfo drive = (DriveInfo)tag;
+        //        parentFullName = drive.Name;
+        //    }
+        //    else if (tag is DirectoryInfo)
+        //    {
+        //        DirectoryInfo di = (DirectoryInfo)tag;
+        //        parentFullName = di.FullName;
+        //    }
+
+        //    if (parentFullName != "")
+        //    {
+        //        lvwClient.Items.Clear();
+        //        List<ListViewItem> dirs = AddDirectories(lvwClient, parentFullName);
+        //        AddFiles(lvwClient, parentFullName);
+
+        //        CUiCommon.AdjustTreeChild(dirs, e.Node);
+        //    }
+        //}
+
         /// <summary>
         /// TreeView의 폴더 노드를 선택하면 해당 폴더 안의 하위 폴더와 파일 목록을 ListView에 추가
         /// </summary>
@@ -67,12 +116,45 @@ namespace KCureVDIDataBox
         /// <param name="e"></param>
         private void tvwClient_BeforeSelect(object? sender, TreeViewCancelEventArgs e)
         {
-            if (e.Node == null) return;
-
+            if (e.Node == null)
+                return;
+            //
             txtClient.Text = e.Node.FullPath;
-
+            //
             var tag = e.Node.Tag;
-            if (tag == null) return;
+            if (tag == null)
+                return;
+            // gony
+            UpdateSelectTreeViewNodeListView(e.Node);
+        }
+
+        /// <summary>
+        /// 우클릭 시에도 해당 노드를 선택하기 위한 이벤트
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tvwClient_NodeMouseClick(object? sender, TreeNodeMouseClickEventArgs e)
+        {
+            tvwClient.SelectedNode = e.Node;
+            // gony
+            UpdateSelectTreeViewNodeListView(e.Node);
+        }
+
+        // 
+        public void UpdateLastSelectedTreeViewNode()
+        {
+            UpdateSelectTreeViewNodeListView(tvwClient.SelectedNode);
+        }
+
+        //
+        public void UpdateSelectTreeViewNodeListView(TreeNode node)
+        {
+            if (node == null)
+                return;
+
+            var tag = node.Tag;
+            if (tag == null)
+                return;
 
             string parentFullName = "";
             if (tag is DriveInfo)
@@ -92,17 +174,8 @@ namespace KCureVDIDataBox
                 List<ListViewItem> dirs = AddDirectories(lvwClient, parentFullName);
                 AddFiles(lvwClient, parentFullName);
 
-                CUiCommon.AdjustTreeChild(dirs, e.Node);
+                CUiCommon.AdjustTreeChild(dirs, node);
             }
-        }
-        /// <summary>
-        /// 우클릭 시에도 해당 노드를 선택하기 위한 이벤트
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void tvwClient_NodeMouseClick(object? sender, TreeNodeMouseClickEventArgs e)
-        {
-            tvwClient.SelectedNode = e.Node;
         }
 
         /// <summary>
@@ -114,9 +187,7 @@ namespace KCureVDIDataBox
         {
             var item = lvwClient.SelectedItems[0];
             if (item.Tag is not DirectoryInfo)
-            {
                 return;
-            }
 
             CUiCommon.SelectTreeFolderByItem(tvwClient, item);
         }
@@ -213,6 +284,34 @@ namespace KCureVDIDataBox
             }
         }
 
+        ///// <summary>
+        ///// 상위 폴더에 대한 하위 폴더 목록을 반환
+        ///// </summary>
+        ///// <param name="parentFullPath"></param>
+        ///// <returns></returns>
+        //public List<DirectoryInfo> GetDirectories(string parentFullPath)
+        //{
+        //    DirectoryInfo di = new DirectoryInfo(parentFullPath);
+        //    DirectoryInfo[] dirs = new DirectoryInfo[0];
+        //    try
+        //    {
+        //        dirs = di.GetDirectories("*", SearchOption.TopDirectoryOnly);
+        //    }
+        //    catch (Exception) 
+        //    { 
+
+        //    }
+        //    //
+        //    if (dirs.Length == 0) 
+        //        return dirs.ToList();
+
+        //    return dirs.Where(dir => (dir.Attributes & FileAttributes.Hidden) != FileAttributes.Hidden
+        //            || (dir.Attributes & FileAttributes.System) != FileAttributes.System
+        //            || (dir.Attributes & FileAttributes.ReparsePoint) != FileAttributes.ReparsePoint)
+        //        .OrderBy(dir => dir.Name)
+        //        .ToList();
+        //}
+
         /// <summary>
         /// 상위 폴더에 대한 하위 폴더 목록을 반환
         /// </summary>
@@ -220,21 +319,34 @@ namespace KCureVDIDataBox
         /// <returns></returns>
         public List<DirectoryInfo> GetDirectories(string parentFullPath)
         {
-            DirectoryInfo di = new DirectoryInfo(parentFullPath);
             DirectoryInfo[] dirs = new DirectoryInfo[0];
+            //
             try
             {
+                DirectoryInfo di = new DirectoryInfo(parentFullPath);
                 dirs = di.GetDirectories("*", SearchOption.TopDirectoryOnly);
+                //gony
+                List<DirectoryInfo> dirUser = new List<DirectoryInfo>();
+                foreach (DirectoryInfo d in dirs)
+                {
+                    if (d.Name.Contains(this.userId))
+                        dirUser.Add(d);
+                }
+                //
+                return dirUser.ToArray().Where(dir => (dir.Attributes & FileAttributes.Hidden) != FileAttributes.Hidden
+                        || (dir.Attributes & FileAttributes.System) != FileAttributes.System
+                        || (dir.Attributes & FileAttributes.ReparsePoint) != FileAttributes.ReparsePoint)
+                    .OrderBy(dir => dir.Name)
+                    .ToList();
             }
-            catch (Exception) { }
-            if (dirs.Length == 0) return dirs.ToList();
+            catch (Exception)
+            {
 
-            return dirs.Where(dir => (dir.Attributes & FileAttributes.Hidden) != FileAttributes.Hidden
-                    || (dir.Attributes & FileAttributes.System) != FileAttributes.System
-                    || (dir.Attributes & FileAttributes.ReparsePoint) != FileAttributes.ReparsePoint)
-                .OrderBy(dir => dir.Name)
-                .ToList();
+            }
+            //
+            return dirs.ToList();
         }
+
         /// <summary>
         /// 상위 폴더에 대한 파일 목록을 반환
         /// </summary>
@@ -249,7 +361,8 @@ namespace KCureVDIDataBox
                 files = di.GetFiles("*", SearchOption.TopDirectoryOnly);
             }
             catch (Exception) { }
-            if (files.Length == 0) return files.ToList();
+            if (files.Length == 0) 
+                return files.ToList();
 
             return files.Where(dir => (dir.Attributes & FileAttributes.Hidden) != FileAttributes.Hidden
                     || (dir.Attributes & FileAttributes.System) != FileAttributes.System
@@ -281,7 +394,8 @@ namespace KCureVDIDataBox
 
             string defaultFullPath = CCommon.GetDefaultFullPath();
             var nodeDefault = CUiCommon.FirstNodeOfFullPath(root, defaultFullPath);
-            if (nodeDefault == null) return;
+            if (nodeDefault == null) 
+                return;
 
             this.tvwClient.SelectedNode = nodeDefault;
             nodeDefault.Expand();

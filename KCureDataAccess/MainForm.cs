@@ -38,9 +38,11 @@ namespace KCureVDIDataBox
                 ApplyResult? applyResult = CCommon.LoginResult.applyResult;
 
                 // 각 파일, FTP용 클래스 생성
-                uiClient = new CUiClient(txtClient, tvwClient, lvwClient);
-                uiServerPrti = new CUiServer("03", this, txtServerPrti, tvwServerPrti, lvwServerPrti, lvwStatus, prgSub, prgMain, btnStop, btnRequestFile, applyResult);
-                uiServerCarry = new CUiServer("04", this, txtServerCarry, tvwServerCarry, lvwServerCarry, lvwStatus, prgSub, prgMain, btnStop, btnRequestFile, applyResult);
+                uiClient = new CUiClient(txtClient, tvwClient, lvwClient, CCommon.LoginId);
+                uiServerPrti = new CUiServer("03", this, txtServerPrti, tvwServerPrti, lvwServerPrti, lvwStatus, 
+                    prgSub, prgMain, btnStop, btnRequestFile, applyResult);
+                uiServerCarry = new CUiServer("04", this, txtServerCarry, tvwServerCarry, lvwServerCarry, lvwStatus, 
+                    prgSub, prgMain, btnStop, btnRequestFile, applyResult);
             }
             catch (Exception ex)
             {
@@ -258,6 +260,8 @@ namespace KCureVDIDataBox
             {
                 CCommon.WriteLog(txtLog, $"압축 풀기 완료\n{zipFullPath} ->\n{extractFullDir}");
             }
+            // gony
+            uiClient.UpdateLastSelectedTreeViewNode();
         }
         /// <summary>
         /// 팝업메뉴에서 열기를 선택하면 선택된 파일 또는 폴더를 탐색기에서 열기
