@@ -89,7 +89,7 @@ App.config의 값에 있는 {id}와 {date} 변수를 실제 값으로 치환
 ConfigUser.xml의 전체 경로를 반환
 
 #### public static void WriteLog(TextBox txtLog, string text)
-TextBox에 로그를 기록하고, 로그 파일에도 기록함.
+TextBox에 로그를 기록하고, 로그 파일에도 기록함.  
 
 #### public static CXmlConfig XmlConfigUser
 ConfigUser.xml 파일 객체를 반환

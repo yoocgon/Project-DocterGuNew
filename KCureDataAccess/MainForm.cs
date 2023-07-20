@@ -180,9 +180,9 @@ namespace KCureVDIDataBox
                 return;
             }
             //
-            var selectedNode = tvwServerPrti.SelectedNode;
-            tvwServerPrti.SelectedNode = null;
-            tvwServerPrti.SelectedNode = selectedNode;
+            var selectedNode = tvwClient.SelectedNode;
+            tvwClient.SelectedNode = null;
+            tvwClient.SelectedNode = selectedNode;
             //
             DeleteZipFileInDefaultDirectory(di);
             MessageBox.Show(this, "반출 신청이 완료되었습니다.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
